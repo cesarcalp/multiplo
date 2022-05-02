@@ -1,0 +1,80 @@
+.logo_multiplo {
+  width: 12%;
+}
+
+.contenedor_logo {
+  display: contents;
+}
+
+@media screen and (max-width: 480px) {
+  .logo_multiplo {
+    width: 50%;
+  }
+}
+
+mat-toolbar {
+  position: fixed;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 2;
+  background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 4%, rgba(12,170,227,1) 28%, rgba(49,118,186,1) 60%, rgba(12,100,170,1) 80%, rgba(0,72,137,1) 100%);
+}
+
+.u-flex-expand-left {
+  margin-left: auto !important;
+}
+
+.btn_registro:hover {
+  color: #ffffff;
+}
+
+.btn_registro {
+  background-color: #e06222;
+  border-color: transparent;
+  color: white;
+  padding: 1.2% 1.2%;
+  border-radius: 8px;
+  font-size: 0.97rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  text-decoration: none;
+}
+
+.btn_menu {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 1.5%;
+  font-weight: 700;
+  font-size: 0.97rem;
+  line-height: 1.5rem;
+}
+
+.btn_home {
+  text-decoration: none;
+  color: #124278;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.mat-elevation-z6 {
+  box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+  height: 85px;
+}
+
+
+
+.elemento_menu {
+  width: 53%;
+}
+
+
+.cuerpo {
+  padding-top: 6%;
+}
+
+@media screen and (max-width: 480px) {
+  .cuerpo {
+    padding-top: 20%;
+  }
+}

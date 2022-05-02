@@ -1,0 +1,43 @@
+<section>
+  <mat-toolbar fxLayout="row" class="mat-elevation-z6">
+    <a [routerLink]="'/'" class="contenedor_logo">
+      <img class="logo_multiplo" src="/assets/images/logo-multiplo.png" />
+    </a>
+    <div class="elemento_menu">
+      <span
+        mat-button
+        *ngFor="let item of menuItems"
+        [fxShow]="item.showOnDesktop"
+        [fxShow.xs]="item.showOnMobile"
+        [fxShow.sm]="item.showOnTablet"
+      >
+        <a href="{{ item.direccion }}" class="{{ item.class }}">
+          {{ item.label }}
+        </a>
+      </span>
+    </div>
+    <ng-container>
+      <button mat-icon-button [matMenuTriggerFor]="dropMenu" fxHide fxShow.xs>
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #dropMenu="matMenu">
+        <ng-container *ngFor="let item of menuItems">
+          <div>
+            <button mat-menu-item>
+              {{ item.label }}
+            </button>
+            <mat-divider></mat-divider>
+          </div>
+        </ng-container>
+      </mat-menu>
+    </ng-container>
+  </mat-toolbar>
+</section>
+<section class="cuerpo">
+  <router-outlet></router-outlet>
+</section>
+<section>
+  <span>
+    Footer
+  </span>
+</section>
